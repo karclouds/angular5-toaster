@@ -1,8 +1,8 @@
 export default {
-    entry: './dist/angular2-toaster.js',
-    dest: './dist/bundles/angular2-toaster.umd.js',
+    entry: './dist/angular5-toaster.js',
+    dest: './dist/bundles/angular5-toaster.umd.js',
     format: 'umd',
-    moduleName: 'angular2toaster',
+    moduleName: 'angular5toaster',
     external: [
         '@angular/core',
         '@angular/common',

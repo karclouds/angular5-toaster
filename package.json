@@ -1,6 +1,6 @@
 {
   "name": "angular5-toaster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Angular Toaster Notification library based on AngularJS-Toaster",
   "main": "bundles/angular5-toaster.umd.js",
   "module": "angular5-toaster.js",
