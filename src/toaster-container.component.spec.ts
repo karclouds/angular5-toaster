@@ -7,7 +7,7 @@ import {ToasterService} from './toaster.service';
 import {ToasterContainerComponent} from './toaster-container.component';
 import {ToasterConfig} from './toaster-config';
 import {BodyOutputType} from './bodyOutputType';
-import {ToasterModule} from '../angular2-toaster';
+import {ToasterModule} from '../angular5-toaster';
 import {BrowserModule} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
