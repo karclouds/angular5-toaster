@@ -15,6 +15,7 @@ export interface Toast {
     clickHandler?: ClickHandler;
     showCloseButton?: boolean;
     closeHtml?: string;
+    closeDivClass?: string;
     toasterConfig?: ToasterConfig;
     data?: any;
 }

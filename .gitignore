@@ -13,3 +13,5 @@ src/*.ngfactory.ts
 angular2-toaster.d.ts
 demo/webpack/bundle.js
 demo/webpack/bundle.js.map
+*.d.ts
+angular5-toaster-*.tgz

@@ -17,7 +17,7 @@ import {BodyOutputType} from './bodyOutputType';
                 <div *ngSwitchCase="bodyOutputType.Default">{{toast.body}}</div>
             </div>
         </div>
-        <div class="toast-close-button" *ngIf="toast.showCloseButton" (click)="click($event, toast)"
+        <div [ngClass]="toast.closeDivClass" *ngIf="toast.showCloseButton" (click)="click($event, toast)"
             [innerHTML]="safeCloseHtml">
         </div>`
 })
@@ -42,8 +42,19 @@ export class ToastComponent implements OnInit, AfterViewInit {
     ) {}
 
     ngOnInit() {
+        // Not sanitizing the close button html
         if (this.toast.closeHtml) {
             this.safeCloseHtml = this.sanitizer.bypassSecurityTrustHtml(this.toast.closeHtml);
+        }
+
+        // Default the close button div tag class if one isn't passed or configured
+        if (this.toast.showCloseButton && !this.toast.closeDivClass) {
+            if (this.toast.toasterConfig) {
+                this.toast.closeDivClass = this.toast.toasterConfig.closeDivClass ?
+                    this.toast.toasterConfig.closeDivClass : 'toast-close-button';
+            } else {
+                this.toast.closeDivClass = 'toast-close-button';
+            }
         }
     }
 
