@@ -5,6 +5,7 @@ export class ToasterConfig implements IToasterConfig {
     tapToDismiss: boolean;
     showCloseButton: boolean|Object;
     closeHtml: string;
+    closeDivClass: string;
     newestOnTop: boolean;
     timeout: number|Object;
     typeClasses: Object;
@@ -32,6 +33,7 @@ export class ToasterConfig implements IToasterConfig {
         this.closeHtml = configOverrides.closeHtml || '<button class="toast-close-button" type="button">&times;</button>';
         this.newestOnTop = configOverrides.newestOnTop != null ? configOverrides.newestOnTop : true;
         this.timeout = configOverrides.timeout != null ? configOverrides.timeout : 5000;
+        this.closeDivClass = configOverrides.closeDivClass != null ? configOverrides.closeDivClass : 'toast-close-button';
         this.typeClasses = configOverrides.typeClasses || {
             error: 'toast-error',
             info: 'toast-info',
@@ -64,6 +66,7 @@ export interface IToasterConfig {
     tapToDismiss?: boolean;
     showCloseButton?: boolean|Object;
     closeHtml?: string;
+    closeDivClass?: string,
     newestOnTop?: boolean;
     timeout?: number|Object;
     typeClasses?: Object;
