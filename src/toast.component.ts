@@ -49,9 +49,8 @@ export class ToastComponent implements OnInit, AfterViewInit {
 
         // Default the close button div tag class if one isn't passed or configured
         if (this.toast.showCloseButton && !this.toast.closeDivClass) {
-            if (this.toast.toasterConfig) {
-                this.toast.closeDivClass = this.toast.toasterConfig.closeDivClass ?
-                    this.toast.toasterConfig.closeDivClass : 'toast-close-button';
+            if (this.toast.toasterConfig && this.toast.toasterConfig.closeDivClass) {
+                this.toast.closeDivClass = this.toast.toasterConfig.closeDivClass;
             } else {
                 this.toast.closeDivClass = 'toast-close-button';
             }
