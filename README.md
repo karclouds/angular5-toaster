@@ -21,12 +21,12 @@ npm install angular5-toaster
 
 ### Copy or Link CSS
 ```html
-<link rel="stylesheet" type="text/css" href="/node_modules/angular5-toaster/toaster.css" />
+<link rel="stylesheet" type="text/css" href="/node_modules/angular5-toaster/src/toaster.css" />
 ```
 
 ### Import CSS with Sass or Less
 ```scss
-@import 'node_modules/angular5-toaster/toaster';
+@import 'node_modules/angular5-toaster/src/toaster';
 ```
 
 
