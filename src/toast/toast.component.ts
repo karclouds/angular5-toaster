@@ -2,8 +2,8 @@ import {Component, Input, Output, ViewChild, ViewContainerRef, EventEmitter,
     ComponentFactoryResolver, ChangeDetectorRef, OnInit, AfterViewInit
 } from '@angular/core';
 import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
-import {Toast} from './toast';
-import {BodyOutputType} from './bodyOutputType';
+import {Toast} from '../toast';
+import {BodyOutputType} from '../bodyOutputType';
 
 @Component({
     selector: '[toastComp]',

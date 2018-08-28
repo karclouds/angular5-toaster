@@ -2,12 +2,12 @@ import {Component, NgModule} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
 import {ComponentFixture} from '@angular/core/testing';
 
-import {Toast, ClickHandler} from './toast';
-import {ToasterService} from './toaster.service';
+import {Toast, ClickHandler} from '../toast';
+import {ToasterService} from '../toaster.service';
 import {ToasterContainerComponent} from './toaster-container.component';
-import {ToasterConfig} from './toaster-config';
-import {BodyOutputType} from './bodyOutputType';
-import {ToasterModule} from '../angular5-toaster';
+import {ToasterConfig} from '.././toaster-config';
+import {BodyOutputType} from '.././bodyOutputType';
+import {Angular6ToasterModule} from '../../angular6-toaster/angular6-toaster.module';
 import {BrowserModule} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -29,7 +29,7 @@ export class TestComponent {
     }
 }
 @NgModule({
-    imports: [ToasterModule, BrowserAnimationsModule],
+    imports: [Angular6ToasterModule, BrowserAnimationsModule],
     declarations: [TestComponent]
 })
 export class TestComponentModule {}
@@ -74,7 +74,7 @@ describe('ToasterContainerComponent with sync ToasterService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestComponent],
-            imports: [ToasterModule, BrowserModule, BrowserAnimationsModule]
+            imports: [Angular6ToasterModule, BrowserModule, BrowserAnimationsModule]
         });
 
         fixture = TestBed.createComponent<TestComponent>(TestComponent);
@@ -662,7 +662,7 @@ describe('ToasterContainerComponent with sync ToasterService', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestComponent],
-            imports: [ToasterModule, BrowserModule, BrowserAnimationsModule]
+            imports: [Angular6ToasterModule, BrowserModule, BrowserAnimationsModule]
         });
 
         fixture = TestBed.createComponent<TestComponent>(TestComponent);
@@ -696,7 +696,7 @@ describe('ToasterContainerComponent when included as a component', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestComponent],
-            imports: [ToasterModule, TestDynamicComponentModule, BrowserAnimationsModule]
+            imports: [Angular6ToasterModule, TestDynamicComponentModule, BrowserAnimationsModule]
         });
 
         fixture = TestBed.createComponent<TestComponent>(TestComponent);
@@ -942,7 +942,7 @@ describe('Multiple ToasterContainerComponent components', () => {
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestComponent],
-            imports: [ToasterModule, TestDynamicComponentModule, BrowserAnimationsModule]
+            imports: [Angular6ToasterModule, TestDynamicComponentModule, BrowserAnimationsModule]
         });
         TestBed.overrideComponent(TestComponent,
             {
@@ -1004,7 +1004,7 @@ describe('ToasterContainerComponent when included as a component with bindings',
     beforeEach(() => {
         TestBed.configureTestingModule({
             declarations: [TestComponent],
-            imports: [ToasterModule, TestBoundDynamicComponentModule, BrowserAnimationsModule]
+            imports: [Angular6ToasterModule, TestBoundDynamicComponentModule, BrowserAnimationsModule]
         });
 
         fixture = TestBed.createComponent<TestComponent>(TestComponent);
