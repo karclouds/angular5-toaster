@@ -12,4 +12,4 @@ import { ToasterService } from './toaster.service';
   declarations: [ToasterContainerComponent, ToastComponent],
   exports: [ToasterContainerComponent, ToastComponent]
 })
-export class Angular6ToasterModule { }
+export class ToasterModule { }
