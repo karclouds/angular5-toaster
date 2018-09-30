@@ -1,8 +1,8 @@
 import { Component, Input, ChangeDetectorRef, OnInit, OnDestroy, NgZone } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { ToasterConfig } from './toaster-config';
-import { ToasterService, IClearWrapper } from './toaster.service';
-import { Toast } from './toast';
+import { ToasterConfig } from '../toaster-config';
+import { ToasterService, IClearWrapper } from '../toaster.service';
+import { Toast } from '../toast';
 
 @Component({
     selector: 'toaster-container',

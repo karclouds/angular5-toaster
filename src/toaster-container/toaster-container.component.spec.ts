@@ -2,12 +2,12 @@ import {Component, NgModule} from '@angular/core';
 import {TestBed} from '@angular/core/testing';
 import {ComponentFixture} from '@angular/core/testing';
 
-import {Toast, ClickHandler} from './toast';
-import {ToasterService} from './toaster.service';
+import {Toast, ClickHandler} from '../toast';
+import {ToasterService} from '../toaster.service';
 import {ToasterContainerComponent} from './toaster-container.component';
-import {ToasterConfig} from './toaster-config';
-import {BodyOutputType} from './bodyOutputType';
-import {ToasterModule} from '../angular5-toaster';
+import {ToasterConfig} from '.././toaster-config';
+import {BodyOutputType} from '.././bodyOutputType';
+import {ToasterModule} from '../angular6-toaster.module';
 import {BrowserModule} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
